@@ -23,4 +23,6 @@ COPY --from=builder /home/node/dist/ /home/node/dist/
 
 RUN npm ci
 
-CMD ["node", "dist/server.js"]
+EXPOSE 3000
+
+CMD ["node", "dist/main.js"]
